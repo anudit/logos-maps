@@ -2,6 +2,9 @@ name: CI
 on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   unit:
     strategy:
@@ -40,6 +43,9 @@ jobs:
         with:
           python-version: '3.12'
       - uses: dtolnay/rust-toolchain@stable
+      - name: Linux native build dependencies
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y libpcsclite-dev libssl-dev libclang-dev pkg-config libegl1
       - uses: cachix/install-nix-action@v31
         with:
           extra_nix_config: |
@@ -68,9 +74,11 @@ jobs:
       - name: Build native Storage and both module packages
         run: |
           nix build 'github:logos-co/logos-storage-module/7548f41ae189917d58c37f0fb6d3a2700b99f59b#lib' -o storage-result
-          nix build 'path:./modules/osm_registry#lgx' -o sdk-result
-          nix build 'path:./modules/osm_distribution#lgx' -o app-result
-          nix build 'path:./examples/consumer#lgx' -o consumer-result
+          nix build 'path:./modules/osm_registry#lgx-portable' -o sdk-result
+          nix build 'path:./modules/osm_distribution#lgx-portable' -o app-result
+          nix build 'path:./examples/consumer#lgx-portable' -o consumer-result
+          mkdir -p artifacts
+          find -L sdk-result app-result consumer-result -name '*.lgx' -exec cp {} artifacts/ \;
       - name: Real sequencer and native Storage end-to-end pipeline
         run: |
           library=$(find -L storage-result/lib -maxdepth 1 -name 'libstorage.*' | head -1)
@@ -81,7 +89,5 @@ jobs:
         with:
           name: modules-${{ matrix.os }}
           path: |
-            sdk-result
-            app-result
-            consumer-result
+            artifacts/*.lgx
             evidence/standalone.json

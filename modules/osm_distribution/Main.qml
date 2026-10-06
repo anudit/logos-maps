@@ -1,5 +1,5 @@
 import QtQuick 2.15
-import QtQuick.Controls 2.15
+import QtQuick.Controls.Basic
 import QtQuick.Layouts 1.15
 
 Pane {
@@ -188,7 +188,12 @@ Pane {
         Label { Layout.fillWidth: true; text: app.status; color: app.failed ? "#f8ab98" : "#bed6c7"; wrapMode: Text.Wrap; Accessible.name: "Workflow status" }
         ScrollView {
             Layout.fillWidth: true; Layout.preferredHeight: 100
-            TextArea { id: details; readOnly: true; color: "#eff4ed"; background: Rectangle { color: "#1a2520"; border.color: "#34473c" }; text: "Select Details to inspect CID, version, parent and verification metadata."; font.family: "monospace"; font.pixelSize: 11; wrapMode: TextEdit.Wrap }
+            TextArea {
+                id: details; readOnly: true; color: "#eff4ed"
+                background: Rectangle { color: "#1a2520"; border.color: "#34473c" }
+                text: "Select Details to inspect CID, version, parent and verification metadata."
+                font.family: "monospace"; font.pixelSize: 11; wrapMode: TextEdit.Wrap
+            }
         }
         Label { text: "OpenStreetMap contributors · ODbL data · Geofabrik extracts. Keep the SDK loaded to serve hosted files."; color: "#8c9b91"; font.pixelSize: 11; wrapMode: Text.Wrap; Layout.fillWidth: true }
     }

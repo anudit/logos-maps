@@ -54,6 +54,8 @@ jobs:
             extra-trusted-public-keys = public:l4HrXgL4nw246+LBh2SOJyhz64BoGegOYLheT/iIAPU=
             accept-flake-config = true
       - name: Install versioned RISC Zero tools
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           curl -fsSL https://risczero.com/install -o /tmp/install-rzup.sh
           bash /tmp/install-rzup.sh -q

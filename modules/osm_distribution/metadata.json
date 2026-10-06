@@ -1,0 +1,11 @@
+{
+  "name": "osm_distribution",
+  "display_name": "Logos Maps",
+  "version": "0.1.0",
+  "type": "ui_qml",
+  "category": "data",
+  "description": "Host and download verified OpenStreetMap snapshots",
+  "view": "Main.qml",
+  "dependencies": ["osm_registry"],
+  "nix": {"packages": {"build": [], "runtime": []}}
+}

@@ -1,0 +1,187 @@
+{
+  "version": "0.1.0",
+  "name": "osm_registry",
+  "instructions": [
+    {
+      "name": "initialize",
+      "accounts": [
+        {
+          "name": "state",
+          "writable": true,
+          "signer": false,
+          "init": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": "osm_registry_v1"
+              }
+            ]
+          },
+          "visibility": [
+            "public"
+          ]
+        },
+        {
+          "name": "authority",
+          "writable": false,
+          "signer": true,
+          "init": false,
+          "visibility": [
+            "public"
+          ]
+        }
+      ],
+      "args": [],
+      "discriminator": [
+        175,
+        175,
+        109,
+        31,
+        13,
+        152,
+        155,
+        237
+      ],
+      "execution": {
+        "public": true,
+        "private_owned": false
+      },
+      "variant": "Initialize"
+    },
+    {
+      "name": "register",
+      "accounts": [
+        {
+          "name": "state",
+          "writable": true,
+          "signer": false,
+          "init": false,
+          "owner": "self_program_id",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": "osm_registry_v1"
+              }
+            ]
+          },
+          "visibility": [
+            "public"
+          ]
+        },
+        {
+          "name": "authority",
+          "writable": false,
+          "signer": true,
+          "init": false,
+          "visibility": [
+            "public"
+          ]
+        }
+      ],
+      "args": [
+        {
+          "name": "payload",
+          "type": "string"
+        }
+      ],
+      "discriminator": [
+        211,
+        124,
+        67,
+        15,
+        211,
+        194,
+        178,
+        240
+      ],
+      "execution": {
+        "public": true,
+        "private_owned": false
+      },
+      "variant": "Register"
+    },
+    {
+      "name": "batch_register",
+      "accounts": [
+        {
+          "name": "state",
+          "writable": true,
+          "signer": false,
+          "init": false,
+          "owner": "self_program_id",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": "osm_registry_v1"
+              }
+            ]
+          },
+          "visibility": [
+            "public"
+          ]
+        },
+        {
+          "name": "authority",
+          "writable": false,
+          "signer": true,
+          "init": false,
+          "visibility": [
+            "public"
+          ]
+        }
+      ],
+      "args": [
+        {
+          "name": "payload",
+          "type": "string"
+        }
+      ],
+      "discriminator": [
+        164,
+        185,
+        210,
+        142,
+        218,
+        220,
+        17,
+        146
+      ],
+      "execution": {
+        "public": true,
+        "private_owned": false
+      },
+      "variant": "BatchRegister"
+    }
+  ],
+  "accounts": [
+    {
+      "name": "RegistryState",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "entries_json",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ],
+  "spec": "0.1.0",
+  "metadata": {
+    "name": "osm_registry",
+    "version": "0.1.0"
+  }
+}

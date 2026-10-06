@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.19)
+project(OsmRegistry LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+include($ENV{LOGOS_MODULE_BUILDER_ROOT}/cmake/LogosModule.cmake)
+logos_module(NAME osm_registry SOURCES src/osm_registry_impl.h src/osm_registry_impl.cpp)
+target_link_libraries(osm_registry_module_plugin PRIVATE ${CMAKE_DL_LIBS})
+install(FILES maps_sdk.pyz idl.json DESTINATION lib)

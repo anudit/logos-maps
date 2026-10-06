@@ -1,0 +1,506 @@
+[
+  {
+    "region": "germany",
+    "parent": null,
+    "level": "country",
+    "path": "europe/germany",
+    "name": "Germany"
+  },
+  {
+    "region": "france",
+    "parent": null,
+    "level": "country",
+    "path": "europe/france",
+    "name": "France"
+  },
+  {
+    "region": "great-britain",
+    "parent": null,
+    "level": "country",
+    "path": "europe/great-britain",
+    "name": "Great Britain"
+  },
+  {
+    "region": "italy",
+    "parent": null,
+    "level": "country",
+    "path": "europe/italy",
+    "name": "Italy"
+  },
+  {
+    "region": "spain",
+    "parent": null,
+    "level": "country",
+    "path": "europe/spain",
+    "name": "Spain"
+  },
+  {
+    "region": "poland",
+    "parent": null,
+    "level": "country",
+    "path": "europe/poland",
+    "name": "Poland"
+  },
+  {
+    "region": "netherlands",
+    "parent": null,
+    "level": "country",
+    "path": "europe/netherlands",
+    "name": "Netherlands"
+  },
+  {
+    "region": "belgium",
+    "parent": null,
+    "level": "country",
+    "path": "europe/belgium",
+    "name": "Belgium"
+  },
+  {
+    "region": "switzerland",
+    "parent": null,
+    "level": "country",
+    "path": "europe/switzerland",
+    "name": "Switzerland"
+  },
+  {
+    "region": "austria",
+    "parent": null,
+    "level": "country",
+    "path": "europe/austria",
+    "name": "Austria"
+  },
+  {
+    "region": "czech-republic",
+    "parent": null,
+    "level": "country",
+    "path": "europe/czech-republic",
+    "name": "Czech Republic"
+  },
+  {
+    "region": "sweden",
+    "parent": null,
+    "level": "country",
+    "path": "europe/sweden",
+    "name": "Sweden"
+  },
+  {
+    "region": "norway",
+    "parent": null,
+    "level": "country",
+    "path": "europe/norway",
+    "name": "Norway"
+  },
+  {
+    "region": "denmark",
+    "parent": null,
+    "level": "country",
+    "path": "europe/denmark",
+    "name": "Denmark"
+  },
+  {
+    "region": "finland",
+    "parent": null,
+    "level": "country",
+    "path": "europe/finland",
+    "name": "Finland"
+  },
+  {
+    "region": "portugal",
+    "parent": null,
+    "level": "country",
+    "path": "europe/portugal",
+    "name": "Portugal"
+  },
+  {
+    "region": "greece",
+    "parent": null,
+    "level": "country",
+    "path": "europe/greece",
+    "name": "Greece"
+  },
+  {
+    "region": "ireland",
+    "parent": null,
+    "level": "country",
+    "path": "europe/ireland",
+    "name": "Ireland"
+  },
+  {
+    "region": "hungary",
+    "parent": null,
+    "level": "country",
+    "path": "europe/hungary",
+    "name": "Hungary"
+  },
+  {
+    "region": "romania",
+    "parent": null,
+    "level": "country",
+    "path": "europe/romania",
+    "name": "Romania"
+  },
+  {
+    "region": "bulgaria",
+    "parent": null,
+    "level": "country",
+    "path": "europe/bulgaria",
+    "name": "Bulgaria"
+  },
+  {
+    "region": "ukraine",
+    "parent": null,
+    "level": "country",
+    "path": "europe/ukraine",
+    "name": "Ukraine"
+  },
+  {
+    "region": "belarus",
+    "parent": null,
+    "level": "country",
+    "path": "europe/belarus",
+    "name": "Belarus"
+  },
+  {
+    "region": "turkey",
+    "parent": null,
+    "level": "country",
+    "path": "europe/turkey",
+    "name": "Turkey"
+  },
+  {
+    "region": "canada",
+    "parent": null,
+    "level": "country",
+    "path": "north-america/canada",
+    "name": "Canada"
+  },
+  {
+    "region": "mexico",
+    "parent": null,
+    "level": "country",
+    "path": "north-america/mexico",
+    "name": "Mexico"
+  },
+  {
+    "region": "japan",
+    "parent": null,
+    "level": "country",
+    "path": "asia/japan",
+    "name": "Japan"
+  },
+  {
+    "region": "south-korea",
+    "parent": null,
+    "level": "country",
+    "path": "asia/south-korea",
+    "name": "South Korea"
+  },
+  {
+    "region": "indonesia",
+    "parent": null,
+    "level": "country",
+    "path": "asia/indonesia",
+    "name": "Indonesia"
+  },
+  {
+    "region": "thailand",
+    "parent": null,
+    "level": "country",
+    "path": "asia/thailand",
+    "name": "Thailand"
+  },
+  {
+    "region": "vietnam",
+    "parent": null,
+    "level": "country",
+    "path": "asia/vietnam",
+    "name": "Vietnam"
+  },
+  {
+    "region": "malaysia",
+    "parent": null,
+    "level": "country",
+    "path": "asia/malaysia",
+    "name": "Malaysia"
+  },
+  {
+    "region": "philippines",
+    "parent": null,
+    "level": "country",
+    "path": "asia/philippines",
+    "name": "Philippines"
+  },
+  {
+    "region": "pakistan",
+    "parent": null,
+    "level": "country",
+    "path": "asia/pakistan",
+    "name": "Pakistan"
+  },
+  {
+    "region": "bangladesh",
+    "parent": null,
+    "level": "country",
+    "path": "asia/bangladesh",
+    "name": "Bangladesh"
+  },
+  {
+    "region": "iran",
+    "parent": null,
+    "level": "country",
+    "path": "asia/iran",
+    "name": "Iran"
+  },
+  {
+    "region": "australia",
+    "parent": null,
+    "level": "country",
+    "path": "australia-oceania/australia",
+    "name": "Australia"
+  },
+  {
+    "region": "brazil",
+    "parent": null,
+    "level": "country",
+    "path": "south-america/brazil",
+    "name": "Brazil"
+  },
+  {
+    "region": "argentina",
+    "parent": null,
+    "level": "country",
+    "path": "south-america/argentina",
+    "name": "Argentina"
+  },
+  {
+    "region": "colombia",
+    "parent": null,
+    "level": "country",
+    "path": "south-america/colombia",
+    "name": "Colombia"
+  },
+  {
+    "region": "peru",
+    "parent": null,
+    "level": "country",
+    "path": "south-america/peru",
+    "name": "Peru"
+  },
+  {
+    "region": "chile",
+    "parent": null,
+    "level": "country",
+    "path": "south-america/chile",
+    "name": "Chile"
+  },
+  {
+    "region": "south-africa",
+    "parent": null,
+    "level": "country",
+    "path": "africa/south-africa",
+    "name": "South Africa"
+  },
+  {
+    "region": "egypt",
+    "parent": null,
+    "level": "country",
+    "path": "africa/egypt",
+    "name": "Egypt"
+  },
+  {
+    "region": "nigeria",
+    "parent": null,
+    "level": "country",
+    "path": "africa/nigeria",
+    "name": "Nigeria"
+  },
+  {
+    "region": "kenya",
+    "parent": null,
+    "level": "country",
+    "path": "africa/kenya",
+    "name": "Kenya"
+  },
+  {
+    "region": "morocco",
+    "parent": null,
+    "level": "country",
+    "path": "africa/morocco",
+    "name": "Morocco"
+  },
+  {
+    "region": "ethiopia",
+    "parent": null,
+    "level": "country",
+    "path": "africa/ethiopia",
+    "name": "Ethiopia"
+  },
+  {
+    "region": "us/california",
+    "parent": "us",
+    "level": "subregion",
+    "path": "north-america/us/california",
+    "name": "California"
+  },
+  {
+    "region": "us/texas",
+    "parent": "us",
+    "level": "subregion",
+    "path": "north-america/us/texas",
+    "name": "Texas"
+  },
+  {
+    "region": "us/florida",
+    "parent": "us",
+    "level": "subregion",
+    "path": "north-america/us/florida",
+    "name": "Florida"
+  },
+  {
+    "region": "us/new-york",
+    "parent": "us",
+    "level": "subregion",
+    "path": "north-america/us/new-york",
+    "name": "New York"
+  },
+  {
+    "region": "us/washington",
+    "parent": "us",
+    "level": "subregion",
+    "path": "north-america/us/washington",
+    "name": "Washington"
+  },
+  {
+    "region": "us/illinois",
+    "parent": "us",
+    "level": "subregion",
+    "path": "north-america/us/illinois",
+    "name": "Illinois"
+  },
+  {
+    "region": "us/georgia",
+    "parent": "us",
+    "level": "subregion",
+    "path": "north-america/us/georgia",
+    "name": "Georgia"
+  },
+  {
+    "region": "us/pennsylvania",
+    "parent": "us",
+    "level": "subregion",
+    "path": "north-america/us/pennsylvania",
+    "name": "Pennsylvania"
+  },
+  {
+    "region": "india/central-zone",
+    "parent": "india",
+    "level": "subregion",
+    "path": "asia/india/central-zone",
+    "name": "Central Zone"
+  },
+  {
+    "region": "india/eastern-zone",
+    "parent": "india",
+    "level": "subregion",
+    "path": "asia/india/eastern-zone",
+    "name": "Eastern Zone"
+  },
+  {
+    "region": "india/north-eastern-zone",
+    "parent": "india",
+    "level": "subregion",
+    "path": "asia/india/north-eastern-zone",
+    "name": "North Eastern Zone"
+  },
+  {
+    "region": "india/northern-zone",
+    "parent": "india",
+    "level": "subregion",
+    "path": "asia/india/northern-zone",
+    "name": "Northern Zone"
+  },
+  {
+    "region": "india/southern-zone",
+    "parent": "india",
+    "level": "subregion",
+    "path": "asia/india/southern-zone",
+    "name": "Southern Zone"
+  },
+  {
+    "region": "india/western-zone",
+    "parent": "india",
+    "level": "subregion",
+    "path": "asia/india/western-zone",
+    "name": "Western Zone"
+  },
+  {
+    "region": "china/guangdong",
+    "parent": "china",
+    "level": "subregion",
+    "path": "asia/china/guangdong",
+    "name": "Guangdong"
+  },
+  {
+    "region": "china/jiangsu",
+    "parent": "china",
+    "level": "subregion",
+    "path": "asia/china/jiangsu",
+    "name": "Jiangsu"
+  },
+  {
+    "region": "china/shandong",
+    "parent": "china",
+    "level": "subregion",
+    "path": "asia/china/shandong",
+    "name": "Shandong"
+  },
+  {
+    "region": "china/zhejiang",
+    "parent": "china",
+    "level": "subregion",
+    "path": "asia/china/zhejiang",
+    "name": "Zhejiang"
+  },
+  {
+    "region": "china/sichuan",
+    "parent": "china",
+    "level": "subregion",
+    "path": "asia/china/sichuan",
+    "name": "Sichuan"
+  },
+  {
+    "region": "china/henan",
+    "parent": "china",
+    "level": "subregion",
+    "path": "asia/china/henan",
+    "name": "Henan"
+  },
+  {
+    "region": "russia/central-fed-district",
+    "parent": "russia",
+    "level": "subregion",
+    "path": "russia/central-fed-district",
+    "name": "Central Fed District"
+  },
+  {
+    "region": "russia/northwestern-fed-district",
+    "parent": "russia",
+    "level": "subregion",
+    "path": "russia/northwestern-fed-district",
+    "name": "Northwestern Fed District"
+  },
+  {
+    "region": "russia/volga-fed-district",
+    "parent": "russia",
+    "level": "subregion",
+    "path": "russia/volga-fed-district",
+    "name": "Volga Fed District"
+  },
+  {
+    "region": "russia/siberian-fed-district",
+    "parent": "russia",
+    "level": "subregion",
+    "path": "russia/siberian-fed-district",
+    "name": "Siberian Fed District"
+  }
+]

@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "logos-maps"
+version = "0.1.0"
+description = "Verified OpenStreetMap snapshot distribution for Logos"
+requires-python = ">=3.9"
+license = "MIT OR Apache-2.0"
+dependencies = []
+
+[project.scripts]
+logos-maps = "logos_maps.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+logos_maps = ["regions.json"]

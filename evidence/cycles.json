@@ -1,0 +1,26 @@
+[
+  {
+    "entries": 1,
+    "operation": "register",
+    "total_cycles": 524288,
+    "user_cycles": 209791
+  },
+  {
+    "entries": 5,
+    "operation": "batch_register",
+    "total_cycles": 1048576,
+    "user_cycles": 651927
+  },
+  {
+    "entries": 25,
+    "operation": "batch_register",
+    "total_cycles": 3211264,
+    "user_cycles": 2877952
+  },
+  {
+    "entries": 72,
+    "operation": "batch_register",
+    "total_cycles": 9437184,
+    "user_cycles": 8286868
+  }
+]

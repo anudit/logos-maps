@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.egg-info/
+build/
+dist/
+target/
+result*
+.maps/
+config.local.json
+*.osm.pbf
+*.part
+.DS_Store
+.env
+.wallet/
+wallet.local.json
+.tools/
+PLAN.md

@@ -1,0 +1,11 @@
+{
+  "name": "osm_consumer_example",
+  "display_name": "OSM SDK Consumer Example",
+  "version": "0.1.0",
+  "type": "ui_qml",
+  "category": "example",
+  "description": "Resolve registry metadata without the distribution app",
+  "view": "Main.qml",
+  "dependencies": ["osm_registry"],
+  "nix": {"packages": {"build": [], "runtime": []}}
+}

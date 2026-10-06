@@ -1,0 +1,11 @@
+{
+  "independent_modules": [],
+  "independent_basecamp_apps": [],
+  "verified_testnet_regions": [],
+  "required_modules": 5,
+  "required_basecamp_apps": 3,
+  "required_countries": 15,
+  "required_regions": 25,
+  "status": "not_met",
+  "note": "Local fixtures and this repository's consumer example are not independent adoption or public-testnet coverage."
+}

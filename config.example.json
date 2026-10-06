@@ -1,0 +1,17 @@
+{
+  "sequencer_url": "http://127.0.0.1:3040",
+  "program_id": "",
+  "registry_account": "",
+  "signer": "",
+  "wallet_home": "",
+  "spel": "spel",
+  "idl": "registry/idl.json",
+  "storage_library": "/Applications/LogosBasecamp.app/Contents/modules/storage_module/libstorage.dylib",
+  "storage_config": {
+    "network": "logos.test"
+  },
+  "work_dir": ".maps",
+  "geofabrik": true,
+  "retries": 4,
+  "timeout": 1800
+}

@@ -1,0 +1,4 @@
+
+thread 'main' (97670165) panicked at lez/wallet/src/cli/mod.rs:240:17:
+Missing authenticated transfer ID from remote
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

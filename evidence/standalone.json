@@ -1,0 +1,10 @@
+{
+  "network": "standalone",
+  "proof_mode": "RISC0_DEV_MODE=1",
+  "fixture_bytes": true,
+  "adoption_coverage": false,
+  "program_id": "10ca9ed7541e5cf39e5bdfdd194aeaa798d462c898db2a45f14ab6bb6f4b5d5f",
+  "registry_account": "5bA9eUbepW5Zik7HWGj2xLvxnEGoK2DPjDBQ1yhhvTMU",
+  "host_query_download": "passed",
+  "atomic_batch": "passed"
+}

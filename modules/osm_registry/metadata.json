@@ -1,0 +1,17 @@
+{
+  "name": "osm_registry",
+  "display_name": "OSM Registry SDK",
+  "version": "0.1.0",
+  "type": "core",
+  "interface": "universal",
+  "description": "Discover, resolve and distribute verified OSM snapshots",
+  "category": "data",
+  "main": "osm_registry_plugin",
+  "dependencies": ["storage_module"],
+  "include": ["maps_sdk.pyz", "idl.json"],
+  "codegen": {"impl_header": "osm_registry_impl.h", "impl_class": "OsmRegistryImpl"},
+  "nix": {
+    "packages": {"build": [], "runtime": ["nlohmann_json", "python3"]},
+    "cmake": {"find_packages": ["Threads"], "extra_link_libraries": ["Threads::Threads"]}
+  }
+}

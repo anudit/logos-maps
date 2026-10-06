@@ -1,7 +1,7 @@
 {
   "name": "osm_distribution",
   "display_name": "Logos Maps",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "type": "ui_qml",
   "category": "data",
   "description": "Host and download verified OpenStreetMap snapshots",

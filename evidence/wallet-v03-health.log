@@ -1,0 +1,5 @@
+Error: Failed to load storage from /Users/anudit/Documents/GitHub/logos-maps/.wallet/v03/storage.json
+
+Caused by:
+    0: Failed to parse storage file
+    1: missing field `authorization_secret_key` at line 244 column 17

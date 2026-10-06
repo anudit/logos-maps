@@ -64,6 +64,7 @@ struct OsmRegistryImpl::Worker {
         stop();
         if (config.empty()) throw std::runtime_error("Configure an absolute config JSON path first");
         auto archive = moduleDirectory() / "maps_sdk.pyz";
+        if (!fs::exists(archive)) archive = moduleDirectory() / "assets" / "engine" / "maps_sdk.pyz";
         const char* overrideArchive = std::getenv("LOGOS_MAPS_ARCHIVE");
         if (overrideArchive) archive = overrideArchive;
         if (!fs::exists(archive)) throw std::runtime_error("SDK Python archive is missing");

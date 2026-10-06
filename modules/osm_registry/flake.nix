@@ -21,9 +21,9 @@
     in base // {
       packages = builtins.mapAttrs (system: packages: packages // {
         lib = withEngine packages.lib;
-        lib-portable = withEngine packages.lib-portable;
+        lib-portable = withEngine (packages.lib-portable or packages.lib);
         lgx = bundlers.${system}.default (withEngine packages.lib);
-        lgx-portable = bundlers.${system}.portable (withEngine packages.lib-portable);
+        lgx-portable = bundlers.${system}.portable (withEngine (packages.lib-portable or packages.lib));
       }) base.packages;
     };
 }

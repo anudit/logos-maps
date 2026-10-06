@@ -81,6 +81,7 @@ jobs:
           nix build 'path:./examples/consumer#lgx-portable' -o consumer-result
           mkdir -p artifacts
           find -L sdk-result app-result consumer-result -name '*.lgx' -exec cp {} artifacts/ \;
+          python3 scripts/check_packages.py artifacts/*.lgx
       - name: Real sequencer and native Storage end-to-end pipeline
         run: |
           library=$(find -L storage-result/lib -maxdepth 1 -name 'libstorage.*' | head -1)

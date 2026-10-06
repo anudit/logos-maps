@@ -1,7 +1,7 @@
 {
   "name": "osm_registry",
   "display_name": "OSM Registry SDK",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "core",
   "interface": "universal",
   "description": "Discover, resolve and distribute verified OSM snapshots",

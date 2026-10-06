@@ -117,6 +117,7 @@ def main():
                 print("Real standalone pipeline and atomic batch passed", flush=True)
                 if args.demo:
                     sdk_config["geofabrik"] = False
+                    sdk_config["label"] = "Local demo (test fixtures)"
                     demo_config = ROOT / ".maps/demo-config.json"
                     demo_config.write_text(json.dumps(sdk_config, indent=2) + "\n")
                     demo_config.chmod(0o600)

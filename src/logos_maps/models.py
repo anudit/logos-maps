@@ -94,6 +94,7 @@ class Config:
     storage_config: object = dataclasses.field(default_factory=dict)
     work_dir: str = ".maps"
     geofabrik: bool = True
+    label: str = "OSM registry"
     retries: int = 4
     timeout: int = 1800
 

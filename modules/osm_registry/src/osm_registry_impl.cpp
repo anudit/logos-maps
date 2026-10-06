@@ -3,6 +3,7 @@
 #include <atomic>
 #include <cstdlib>
 #include <filesystem>
+#include <fstream>
 #include <mutex>
 #include <thread>
 #include <vector>
@@ -150,13 +151,35 @@ OsmRegistryImpl::~OsmRegistryImpl() = default;
 
 std::string OsmRegistryImpl::configure(const std::string& configPath) {
     try {
-        if (!fs::path(configPath).is_absolute() || !fs::is_regular_file(configPath))
+        std::string chosen = configPath;
+        fs::path saved;
+        if (!instancePersistencePath().empty()) saved = fs::path(instancePersistencePath()) / "maps-connection.json";
+        if (chosen.empty()) chosen = worker_->config;
+        if (chosen.empty()) {
+            if (const char* value = std::getenv("LOGOS_MAPS_CONFIG")) chosen = value;
+        }
+        if (chosen.empty() && !saved.empty() && fs::exists(saved)) {
+            std::ifstream input(saved);
+            chosen = Json::parse(input).value("config_path", std::string());
+        }
+        if (chosen.empty()) return Json{{"success",false},{"needs_configuration",true}}.dump();
+        if (!fs::path(chosen).is_absolute() || !fs::is_regular_file(chosen))
             throw std::runtime_error("Choose an existing absolute config JSON path");
-        if(worker_->config==configPath) return Json{{"success",true}}.dump();
-        { std::lock_guard<std::mutex> lock(worker_->mutex);
-          if(!worker_->outstanding.empty()) throw std::runtime_error("Wait for active SDK jobs before changing configuration"); }
-        worker_->stop(); worker_->config=configPath;
-        return Json{{"success",true}}.dump();
+        std::ifstream input(chosen);
+        auto configuration = Json::parse(input);
+        if (worker_->config != chosen) {
+            { std::lock_guard<std::mutex> lock(worker_->mutex);
+              if(!worker_->outstanding.empty()) throw std::runtime_error("Wait for active SDK jobs before changing configuration"); }
+            worker_->stop(); worker_->config=chosen;
+        }
+        if (!saved.empty()) {
+            fs::create_directories(saved.parent_path());
+            std::ofstream output(saved); output << Json{{"config_path",chosen}}.dump(); output.close();
+            fs::permissions(saved,fs::perms::owner_read|fs::perms::owner_write);
+        }
+        return Json{{"success",true},{"config_path",chosen},
+                    {"label",configuration.value("label",std::string("OSM registry"))},
+                    {"central_enabled",configuration.value("geofabrik",true)}}.dump();
     } catch (const std::exception& e) { return Json{{"success",false},{"error",e.what()}}.dump(); }
 }
 std::string OsmRegistryImpl::request(const std::string& requestJson) {

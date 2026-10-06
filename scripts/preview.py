@@ -60,7 +60,10 @@ class SDKBridge(QObject):
                     if not self.process.waitForStarted(3000):
                         raise ValueError("Could not start SDK worker")
                     self.config = path
-                result = {"success": True}
+                configuration = json.loads(Path(path).read_text())
+                result = {"success": True, "config_path": path,
+                          "label": configuration.get("label", "OSM registry"),
+                          "central_enabled": configuration.get("geofabrik", True)}
             elif method == "request":
                 if self.process.state() != QProcess.Running:
                     raise ValueError("Connect to a configuration first")

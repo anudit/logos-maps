@@ -4,7 +4,7 @@ permissions:
   contents: read
 concurrency:
   group: ci-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 jobs:
   unit:
     strategy:
@@ -68,6 +68,14 @@ jobs:
           git clone --depth 1 --branch v0.2.4 https://github.com/logos-blockchain/logos-execution-zone .tools/lez
           git clone https://github.com/logos-co/spel .tools/spel
           git -C .tools/spel checkout 415b7bcbe7a3bd95ec9e34aef41f5e41d51f0f9c
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: |
+            .tools/lez
+            .tools/spel
+            registry
+            registry/methods
+          cache-on-failure: true
       - name: Build wallet, SPEL and real standalone sequencer
         run: |
           cargo build --release --manifest-path .tools/lez/Cargo.toml -p wallet -p sequencer_service --features sequencer_service/standalone

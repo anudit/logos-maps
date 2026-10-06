@@ -11,7 +11,8 @@
       flakeInputs = inputs;
         postInstall = ''
           mkdir -p $out/share/maps-engine
-          cp ${./maps_sdk.pyz} ${./idl.json} $out/share/maps-engine/
+          cp ${./maps_sdk.pyz} $out/share/maps-engine/maps_sdk.pyz
+          cp ${./idl.json} $out/share/maps-engine/idl.json
         '';
       };
       withEngine = drv: drv // {

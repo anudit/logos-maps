@@ -1,6 +1,6 @@
 # Logos Maps
 
-For this prepared Mac checkout, see [local testing](docs/LOCAL_TESTING.md) for the working fixture demo, QML preview, and portable package installation steps for your installed Basecamp. The preview is verified; Basecamp package builds and installation are still pending.
+For this prepared Mac checkout, see [local testing](docs/LOCAL_TESTING.md) for the fixture demo, QML preview and Basecamp installation. The SDK and app have published macOS/Linux packages in [the separate catalog](https://github.com/anudit/logos-maps-catalog/releases); Basecamp 0.3.1 has loaded both modules. Runtime asset and UI improvements are being released as 0.1.2. Public-testnet deployment and required adoption remain incomplete.
 
 Distribute verified OpenStreetMap PBF snapshots through Logos Storage and a SPEL registry on the Logos Execution Zone. The CLI and Basecamp distribution app share one SDK; consumers can load the standalone SDK without the distribution app.
 

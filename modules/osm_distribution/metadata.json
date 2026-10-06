@@ -6,6 +6,14 @@
   "category": "data",
   "description": "Host and download verified OpenStreetMap snapshots",
   "view": "Main.qml",
-  "dependencies": ["osm_registry"],
-  "nix": {"packages": {"build": [], "runtime": []}}
+  "dependencies": [
+    "osm_registry"
+  ],
+  "nix": {
+    "packages": {
+      "build": [],
+      "runtime": []
+    }
+  },
+  "icon": "icon.png"
 }

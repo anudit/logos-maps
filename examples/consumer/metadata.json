@@ -6,6 +6,14 @@
   "category": "example",
   "description": "Resolve registry metadata without the distribution app",
   "view": "Main.qml",
-  "dependencies": ["osm_registry"],
-  "nix": {"packages": {"build": [], "runtime": []}}
+  "dependencies": [
+    "osm_registry"
+  ],
+  "nix": {
+    "packages": {
+      "build": [],
+      "runtime": []
+    }
+  },
+  "icon": "icon.png"
 }
